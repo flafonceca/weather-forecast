@@ -1,25 +1,24 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatInputModule } from '@angular/material/input';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import { AppComponent } from './app.component';
+import {MaterialExampleModule} from '../material.module';
+import {DatepickerInlineCalendarExample} from './datepicker-inline-calendar-example';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatNativeDateModule} from '@angular/material/core';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [DatepickerInlineCalendarExample],
   imports: [
-    BrowserModule,
     BrowserAnimationsModule,
+    BrowserModule,
     FormsModule,
+    HttpClientModule,
+    MatNativeDateModule,
+    MaterialExampleModule,
     ReactiveFormsModule,
-    MatDatepickerModule,
-    MatInputModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [DatepickerInlineCalendarExample],
 })
-export class AppModule { }
+export class AppModule {}
